@@ -1,0 +1,10 @@
+--- styles.py	2023-03-21 14:53:01.759005946 +0000
++++ styles_fix.py	2023-03-21 14:52:01.634736815 +0000
+@@ -83,5 +83,5 @@
+ 
+         # Always keep a backup file around
+         if os.path.exists(path):
+-            shutil.move(path, path + ".bak")
+-        shutil.move(temp_path, path)
++            shutil.copy2(path, path + ".bak")
++        shutil.copy2(temp_path, path)
